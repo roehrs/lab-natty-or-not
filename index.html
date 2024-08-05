@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Tracker</title>
+</head>
+<body>
+    <h1>Time Tracker</h1>
+    <button id="newIntervalButton">Start New Interval</button>
+    <div id="buttonsContainer"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Interval</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration (seconds)</th>
+            </tr>
+        </thead>
+        <tbody id="timeTableBody">
+        </tbody>
+    </table>
+    <p>Average Duration: <span id="averageDuration">0</span> seconds</p>
+
+    <script>
+        const newIntervalButton = document.getElementById("newIntervalButton");
+        const buttonsContainer = document.getElementById("buttonsContainer");
+        const timeTableBody = document.getElementById("timeTableBody");
+        const averageDurationDisplay = document.getElementById("averageDuration");
+        let intervalCount = localStorage.getItem('intervalCount') ? parseInt(localStorage.getItem('intervalCount')) : 0;
+        let totalDuration = localStorage.getItem('totalDuration') ? parseFloat(localStorage.getItem('totalDuration')) : 0;
+        let startTimes = JSON.parse(localStorage.getItem('startTimes')) || {};
+
+        window.onload = function() {
+            // Load saved intervals on page load
+            for (let i = 1; i <= intervalCount; i++) {
+                if (localStorage.getItem(`interval${i}`)) {
+                    const intervalData = JSON.parse(localStorage.getItem(`interval${i}`));
+                    addRow(`interval${i}`, new Date(intervalData.start), new Date(intervalData.end), intervalData.duration);
+                }
+            }
+            updateAverageDuration();
+        };
+
+        newIntervalButton.addEventListener("click", () => {
+            intervalCount++;
+            const intervalId = `interval${intervalCount}`;
+            startTimes[intervalId] = new Date().getTime();
+            localStorage.setItem('startTimes', JSON.stringify(startTimes));
+            localStorage.setItem('intervalCount', intervalCount.toString());
+
+            const endButton = document.createElement("button");
+            endButton.textContent = `End Interval ${intervalCount}`;
+            endButton.onclick = function() {
+                const endTime = new Date();
+                const duration = (endTime.getTime() - startTimes[intervalId]) / 1000; // Duration in seconds
+                totalDuration += duration;
+                addRow(intervalId, new Date(startTimes[intervalId]), endTime, duration);
+                updateAverageDuration();
+                localStorage.setItem(`interval${intervalCount}`, JSON.stringify({ start: startTimes[intervalId], end: endTime.getTime(), duration: duration }));
+                localStorage.setItem('totalDuration', totalDuration.toString());
+                endButton.remove(); // Remove the button after use
+                delete startTimes[intervalId]; // Clean up the start time
+                localStorage.setItem('startTimes', JSON.stringify(startTimes));
+            };
+
+            buttonsContainer.appendChild(endButton);
+        });
+
+        function addRow(intervalId, start, end, duration) {
+            const row = document.createElement("tr");
+            const intervalCell = document.createElement("td");
+            const startCell = document.createElement("td");
+            const endCell = document.createElement("td");
+            const durationCell = document.createElement("td");
+
+            intervalCell.textContent = intervalId;
+            startCell.textContent = start.toLocaleTimeString();
+            endCell.textContent = end.toLocaleTimeString();
+            durationCell.textContent = duration.toFixed(2);
+
+            row.appendChild(intervalCell);
+            row.appendChild(startCell);
+            row.appendChild(endCell);
+            row.appendChild(durationCell);
+
+            timeTableBody.appendChild(row);
+        }
+
+        function updateAverageDuration() {
+            const averageDuration = totalDuration / intervalCount;
+            averageDurationDisplay.textContent = averageDuration.toFixed(2);
+        }
+    </script>
+</body>
+</html>
