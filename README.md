@@ -1,51 +1,54 @@
-# Natural ou Fake Natty? Como Vencer na Era das IAs Generativas
-
-## 🚀 Introdução
-
-> Woooow! Look at this 👀
-
-Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisiculturismo, este Lab da DIO te convida a conhecer o mundo das IAs Generativas, explorando o potencial dessas tendências tecnológicas incríveis!
-
-## 🎯 Bora Pro Desafio!? Você Já Venceu 💪🤓
-
-### Objetivos
-
-1. **Explorar IAs Generativas**: Utilize essas tecnologias para criar conteúdos que sejam o mais realista possível. Seja criativo! Você pode produzir imagens, textos, áudios, vídeos ou combinações de tudo isso!
-1. **Potfólio de Projetos**:
-    1. Faça o "fork" deste repositório, criando uma cópia em seu GitHub pessoal;
-    2. Edite seu README com os detalhes do seu projeto, siga nosso [Template](#template) (é só copiar, colar e preencher);
-    3. Submeta o link do seu repositório na plataforma da DIO. Pronto, você acabou de fortalecer seu portfólio de projetos nos perfis do GitHub e DIO 🚀
-1. **Efeito de Rede**: Compartilhe seus resultados nas redes sociais com a hashtag **#LabDIONattyOrNot**. Não esqueça de nos marcar: [DIO](https://www.linkedin.com/school/dio-makethechange) e [falvojr](https://www.linkedin.com/in/falvojr).
-
-### Template
-
-```markdown
-# Título do Projeto Extremamente Aesthetic ;)
+# LançamentoInteligente
 
 ## 📒 Descrição
-Breve descrição do seu projeto
+
+O **LançamentoInteligente** é um web app inteligente desenvolvido com o objetivo de facilitar o registro e gerenciamento de marcações de tempo. Combinando a praticidade da web com a eficiência da inteligência artificial, o MarcaçãoAI oferece as seguintes funcionalidades:
+1. **Registro de Marcações:** Os usuários podem inserir o início e o término de cada marcação, seja para atividades de trabalho, estudo ou lazer.
+2. **Cálculo Automático:** O MarcaçãoAI calcula automaticamente a duração de cada marcação e armazena esses dados de forma organizada.
+3. **Média de Tempo:** Além de registrar as marcações individuais, o app também calcula a média de tempo entre todas as atividades, fornecendo insights valiosos sobre o uso do tempo.
+4. **Acessibilidade e Hospedagem:** O MarcaçãoAI foi projetado para ser de fácil hospedagem e acesso. Sua interface amigável permite que os usuários acessem suas marcações de qualquer dispositivo com conexão à internet.
+
+Se você busca uma solução inteligente para gerenciar suas marcações de tempo, experimente o MarcaçãoAI e otimize sua produtividade! 🎯📊
+
 
 ## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
+Foi utilizado 100% do Copilot!
+
+O **Microsoft Copilot** é um assistente de **inteligência artificial (IA)** desenvolvido em colaboração com a **OpenAI**. Ele se integra perfeitamente a vários aplicativos e plataformas da Microsoft, como o **Microsoft 365**, **Edge** e **Windows 11**.
+Experimente o Copilot e otimize sua criatividade e produtividade! 😊
 
 ## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
+# Processo de Criação por Inteligência Artificial
+
+1. **Entrada do Usuário**:
+   - A IA processa a entrada do usuário, que pode ser uma pergunta ou informações relevantes.
+   - Com base nisso, ela gera uma resposta inicial.
+
+2. **Abstração e Aprimoramento**:
+   - O usuário abstrai os pontos importantes da resposta inicial.
+   - Isso pode incluir o contexto, ideias-chave ou a estrutura geral.
+
+3. **Iteração e Refinamento**:
+   - Com base na abstração do usuário, a IA gera uma resposta aprimorada.
+   - Esse processo pode ser iterativo para melhorar a qualidade da resposta final.
 
 ## 🚀 Resultados
-Apresente os resultados do seu projeto
+# Instruções para Executar o Projeto
+
+1. **Fork do Repositório**:
+   - Clique no botão "Fork" no canto superior direito desta página.
+   - Isso criará uma cópia do repositório em sua conta do GitHub.
+
+2. **Clone o Repositório Forkado**:
+   - Abra o terminal ou o Git Bash.
+   - Navegue até o diretório onde deseja clonar o repositório.
+   - Execute o seguinte comando, substituindo `<seu-nome-de-usuário>` pelo seu nome de usuário do GitHub:
+
+   ```bash
+   git clone https://github.com/<seu-nome-de-usuário>/nome-do-repositório.git
+3. **Execute o Arquivo** index.html
+    - Abra o arquivo index.html em seu navegador de preferência.
+    - O projeto já está funcionando e pronto para uso!
 
 ## 💭 Reflexão (Opcional)
-Comente sobre o desafio de criar algo 'natty' com IA.
-```
-
-### Exemplos e Insigths
-
-- [E-BOOK](/exemplos/E-BOOK.md)
-- [Podcast](/exemplos/PODCAST.md)
-- [Vídeo (Avatar Virtual)](/exemplos/VIDEO.md)
-
-## Links Interessantes
-
-[Base10: If You’re Not First, You’re Last: How AI Becomes Mission Critical](https://base10.vc/post/generative-ai-mission-critical/)
-
-![Base10's Trend Map Generative AI](https://github.com/digitalinnovationone/lab-natty-or-not/assets/730492/f4df26e8-f8f7-4419-8252-c69d73ea930c)
+Me diz ai, esse readme é Natty or not?
